@@ -1,7 +1,6 @@
 import scala.collection.mutable.ArrayBuffer
 
-
-object EjerciciosPracticas {
+object EjercicioVectores {
   
   def main(args: Array[String]): Unit = {
     
