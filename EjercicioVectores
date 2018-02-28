@@ -1,0 +1,91 @@
+import scala.collection.mutable.ArrayBuffer
+
+
+object EjerciciosPracticas {
+  
+  def main(args: Array[String]): Unit = {
+    
+    val parcial1 = ArrayBuffer[Int](100, 90, 80, 90, 85, 80)
+    val parcial2 = ArrayBuffer[Int](90, 90, 80, 100, 85, 80)
+    val parcial3 = ArrayBuffer[Int](80, 100, 100, 80, 95, 90)
+    val parcial4 = ArrayBuffer[Int](100, 100, 100, 100, 95, 90)
+    
+    println("Promedio Parcial 1: " + promedioParcial(parcial1))
+    println("Promedio Parcial 2: " + promedioParcial(parcial2))
+    println("Promedio Parcial 3: " + promedioParcial(parcial3))
+    println("Promedio Parcial 4: " + promedioParcial(parcial4))
+    println()
+    println("Promedio Materia 1:" + promedioMateria1(parcial1, parcial2, parcial3, parcial4))
+    println("Promedio Materia 2:" + promedioMateria2(parcial1, parcial2, parcial3, parcial4))
+    println("Promedio Materia 3:" + promedioMateria3(parcial1, parcial2, parcial3, parcial4))
+    println("Promedio Materia 4:" + promedioMateria4(parcial1, parcial2, parcial3, parcial4))
+    println("Promedio Materia 5:" + promedioMateria5(parcial1, parcial2, parcial3, parcial4))
+    println("Promedio Materia 6:" + promedioMateria6(parcial1, parcial2, parcial3, parcial4))
+    println()
+    println("Promedio General: " + promedioGeneral(promedioParcial(parcial1), promedioParcial(parcial2), promedioParcial(parcial3), promedioParcial(parcial4)))
+    
+  }
+  
+  def promedioParcial(v1: ArrayBuffer[Int]): Int = {
+    
+    var suma = 0
+    
+    
+    for(v <- v1){
+        suma = suma + v
+    }
+    
+    var prom = suma / 6
+    
+    prom
+  }
+  
+  def promedioGeneral(prom1: Int, prom2: Int, prom3: Int, prom4: Int): Int = {
+    
+    var promGen = (prom1 + prom2 + prom3 + prom4)/4
+    
+    promGen
+  }
+  
+  def promedioMateria1(v1: ArrayBuffer[Int], v2: ArrayBuffer[Int], v3: ArrayBuffer[Int], v4: ArrayBuffer[Int]): Int = {
+    
+    var prom1 = (v1(0) + v2(0) + v3(0) + v4(0))/4
+    
+    prom1
+  }
+  
+  def promedioMateria2(v1: ArrayBuffer[Int], v2: ArrayBuffer[Int], v3: ArrayBuffer[Int], v4: ArrayBuffer[Int]): Int = {
+    
+    var prom2 = (v1(1) + v2(1) + v3(1) + v4(1))/4
+    
+    prom2
+  }
+  
+  def promedioMateria3(v1: ArrayBuffer[Int], v2: ArrayBuffer[Int], v3: ArrayBuffer[Int], v4: ArrayBuffer[Int]): Int = {
+    
+    var prom3 = (v1(2) + v2(2) + v3(2) + v4(2))/4
+    
+    prom3
+  }
+  
+  def promedioMateria4(v1: ArrayBuffer[Int], v2: ArrayBuffer[Int], v3: ArrayBuffer[Int], v4: ArrayBuffer[Int]): Int = {
+    
+    var prom4 = (v1(3) + v2(3) + v3(3) + v4(3))/4
+    
+    prom4
+  }
+  
+  def promedioMateria5(v1: ArrayBuffer[Int], v2: ArrayBuffer[Int], v3: ArrayBuffer[Int], v4: ArrayBuffer[Int]): Int = {
+    
+    var prom5 = (v1(4) + v2(4) + v3(4) + v4(4))/4
+    
+    prom5
+  }
+  
+  def promedioMateria6(v1: ArrayBuffer[Int], v2: ArrayBuffer[Int], v3: ArrayBuffer[Int], v4: ArrayBuffer[Int]): Int = {
+    
+    var prom6 = (v1(5) + v2(5) + v3(5) + v4(5))/4
+    
+    prom6
+  }
+}
